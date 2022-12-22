@@ -4,6 +4,8 @@
 @section('content')
     <div class="container">
         <h2>Tutti i comics</h2>
+        <a class="btn btn-success mt-4" href="{{ route('comics.create') }}">Aggiungi un
+            nuovo Comic</a>
 
     </div>
     <div class="container">
