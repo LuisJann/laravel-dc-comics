@@ -29,6 +29,7 @@
                         <td><button class="btn btn-primary "><a class="nav-link text-white"
                                     href="{{ route('comics.show', $comic->id) }}">Scopri di più</a>
                             </button>
+                            <a class="btn btn-warning text-white" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
                         </td>
                     </tr>
                 @endforeach
