@@ -30,10 +30,16 @@
                                     href="{{ route('comics.show', $comic->id) }}">Scopri di più</a>
                             </button>
                             <a class="btn btn-warning text-white" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="d-inline">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger delete-btn" type="submit"
+                                    data-comic-title="{{ $comic->title }}">Cancella</button>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
+    @include('partials.delete-modal')
 @endsection
